@@ -11,7 +11,7 @@ const whiteList = ['http://localhost:3000',
 app.use(cors({ origin: whiteList }));
 const allowCors = (req, res, next) => {
     res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', whiteList);
     res.setHeader('Access-Control-Allow-Methods', 'GET');
     res.setHeader(
         'Access-Control-Allow-Headers',
